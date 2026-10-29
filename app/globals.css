@@ -1,26 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-gothic-text: #8B4513;
+  --color-gothic-bg-start: #1a1a2e;
+  --color-gothic-bg-end: #16213e;
+  --color-gothic-bg-text: #e6e6e6;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.gothic-text {
+  color: var(--color-gothic-text);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.gothic-bg {
+  background: linear-gradient(to bottom, var(--color-gothic-bg-start), var(--color-gothic-bg-end));
+  color: var(--color-gothic-bg-text);
 }
